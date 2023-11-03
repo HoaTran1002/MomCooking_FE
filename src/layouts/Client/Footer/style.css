@@ -1,0 +1,19 @@
+.footer{
+    background-color: rgb(35, 35, 35);
+    margin-top: 70px;
+}
+.coppy-right{
+    width: 100%;
+    background-color: #262626;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+.coppy-right .first{
+    color: #dedede;
+}
+.coppy-right .second{
+    color: #ffffff;
+}

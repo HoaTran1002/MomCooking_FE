@@ -1,0 +1,99 @@
+.navbar-left {
+    position: absolute;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 40;
+    padding: 10px;
+    animation: menuNavbar 0.1s linear;
+}
+.modal{
+    position: unset;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    transition: all linear 0.2s;
+}
+.modal-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000071;
+    z-index: 30;
+}
+
+.navbar-controller {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.navbar-controller-box {
+    padding: 10px;
+}
+
+.navbar-user-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-controller-icon {
+    font-size: 22px;
+}
+
+.navbar-user-img img {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+}
+
+.navbar-user-info .name {
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+}
+
+.navbar-user-info .email {
+    font-size: 14px;
+    color: #909090;
+    text-align: center;
+    margin: 5px 0;
+}
+.navbar-settings{
+    display: flex;
+    flex-direction: column;
+    padding:0 10px
+}
+.navbar-settings-items{
+    font-size: 23px;
+    padding: 8px 10px;
+}
+.navbar-settings-items-link{
+    color: black;
+    display: flex;
+    align-items: center;
+    gap:30px
+}
+.navbar-settings-items-name{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@keyframes menuNavbar {
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translate(0);
+    }   
+}

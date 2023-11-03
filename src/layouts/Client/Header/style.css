@@ -1,0 +1,58 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all linear 0.2s;
+    margin-bottom: 300px;
+}
+.header-content{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    background-color: white
+
+}
+.logo-img-link {
+    height: 60px;
+    display: block;
+}
+
+.header-items {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 65px;
+}
+.icons-navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.contacts-header{
+    background-color: black;
+    color:white;
+    padding:8px 13px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+.contacts-header-left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contacts-header-left-items{
+
+}
+.contacts.icons{
+    padding-right: 5px;
+}
+.contacts-header-right{
+
+}

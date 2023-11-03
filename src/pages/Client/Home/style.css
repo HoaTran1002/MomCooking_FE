@@ -1,0 +1,221 @@
+.carousel-slider{
+    margin-top: 120px;
+    z-index: 1 !important;
+}
+.carousel-slider-items{
+    height: 300px;
+    width: 100%;
+    background-color: #acacac;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slider-items-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+:where(.css-dev-only-do-not-override-1vr7spz).ant-carousel .slick-dots{
+    z-index: 1;
+}
+.slider-courses{
+    display: flex; 
+    overflow-x: scroll; 
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap:10px
+}
+.slider-courses-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+
+}
+.slider-courses-items-content{
+    width: 170px;
+    height: 130px;  
+    overflow: hidden;
+    border-radius: 10px; 
+    position: relative;
+}
+.slider-courses-items-img{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+.slider-courses-items-content::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #00000029;
+}   
+.slider-courses-items-content-name{
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.slider-courses-items-content-name .title{
+    font-size: 19px;
+    width: 90%;
+    font-weight: 600;
+    padding: 0 10px;
+    text-wrap: wrap;
+    text-align: center;
+}
+.slider-courses-items.products{
+    height: 330px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slider-courses-items.products .item-img{
+   height: 100%;
+   width: 100%;
+
+}
+.slider-courses-items.products::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0000004e;
+}   
+.slider-courses-items.products .item-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding:10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: end;
+    gap: 5px;
+}
+
+.slider-courses-items.products .item-content .title,
+.slider-courses-items.products .item-content .des{
+    color: white;
+    width: 100%;
+    margin: 0;
+    text-wrap: pretty;
+}
+.item-like{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all linear 0.2s;
+}
+.item-like .item-like-icon{
+    color:white;
+    font-size: 20px;
+}
+.item-like:hover{
+    background-color: white;
+}
+.item-like:hover .item-like-icon{
+    color: #f53b57;
+}
+.title-link-more{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-news{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.content-news-img{
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content-news-info{
+    padding: 8px 13px;
+}
+.bg-sub{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    
+}
+.bg-sub::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000003f;
+}
+.bg-sub-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.bg-sub-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.input-subscribe{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+}
+.input-subscribe input{
+    width: 100%;
+    font-size: 19px;
+    outline: none;
+    border: none;
+}
+.input-button{
+    width: fit-content;
+    padding: 8px 20px;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    font-weight: 700;
+    font-size: 17px;
+}
