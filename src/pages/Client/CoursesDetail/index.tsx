@@ -3,12 +3,12 @@ import LayoutMain from '../../../layouts/Client/Main'
 import dot from "../../../assets/images/dot_1.png"
 import bread1 from "../../../assets/images/Courses/Bread/image_10.png"
 import bread2 from "../../../assets/images/Courses/Bread/image_9.png"
-import { product } from '../Courses/data'
 
 import { Link } from 'react-router-dom'
 import SliderCarousel from '../../../components/Carousel/SliderCarousel'
-import { IProductsCourse } from '../../../app/Courses/courses.interface'
+import { IProductsCourse } from '../../../app/interface/courses.interface'
 import ProductDetail from './ProductDetail'
+import { product } from '../../../data/product'
 const CoursesDetail = (): JSX.Element => {
     const [filterIndex, setFilterIndex] = React.useState<number>(0)
     const [open,setOpen] = React.useState<boolean>(false)
@@ -30,12 +30,15 @@ const CoursesDetail = (): JSX.Element => {
     return (
         <LayoutMain>
             <div >
-                <div className='mt-32'>
+                <div className='mt-32 relative'>
+                    <div className='absolute uppercase w-full h-80 bg-slate-950/20 flex items-center justify-center px-3 z-10 text-white text-xl font-normal text-center'>
+                        ngọt ngào với lớp bánh mịn màng kem trắng thơm ngon
+                    </div>
                     <SliderCarousel autoplay={true} dots={false} autoplaySpeed={2000}>
                         {
                             product.map((r: IProductsCourse, index: number) => (
-                                <div key={index}>
-                                    <div className='carousel-slider-items'>
+                                <div key={index} className=''>
+                                    <div className='carousel-slider-items h-80'>
                                         <img loading="lazy" src={r.productImage} alt="" className='carousel-slider-items-img' />
                                     </div>
                                 </div>
@@ -46,19 +49,16 @@ const CoursesDetail = (): JSX.Element => {
                 </div>
                 <div className='container'>
                     <div className='flex flex-col gap-6 items-center justify-center pt-3'>
-                        <h3 className='text-black text-3xl font-normal '>COURSES</h3>
-                        <div className='text-2xl font-semibold'>
-                            Khóa học làm bánh
-                        </div>
+                        <h3 className='text-black text-3xl font-normal '>CAKE COURSE</h3>
                         <p className='text-center'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maxime sint aspernatur,
                         </p>
                     </div>
                     <div className='flex items-center justify-center py-3'>
-                        <button className='py-2 px-6 bg-black text-white font-semibold rounded-lg'>
+                        <Link to={'/Order'} className='py-2 px-6 bg-black min-w-max text-white font-semibold rounded-lg'>
                             <i className="ri-calendar-line mr-2"></i>
                             Đặt lịch ngay
-                        </button>
+                        </Link>
                     </div>
                     <div className='grid max-sm:grid-cols-12 gap-6'>
                         {

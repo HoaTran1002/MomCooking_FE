@@ -176,12 +176,12 @@ const Header = (): JSX.Element => {
                             </button>
                         </div> */}
                                 <div className='flex items-center justify-center gap-3'>
-                                    <button className='rounded-xl bg-black font-medium text-white px-4 py-1'>
+                                    <Link to={'/Login'} className='rounded-xl bg-black font-medium text-white px-4 py-1'>
                                         Đăng Nhập
-                                    </button>
-                                    <button className='rounded-xl border border-black bg-white font-medium text-black px-4 py-1'>
+                                    </Link>
+                                    <Link to={'/Register'} className='rounded-xl border border-black bg-white font-medium text-black px-4 py-1'>
                                         Đăng Nhập
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                             <Divider />

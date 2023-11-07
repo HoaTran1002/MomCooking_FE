@@ -1,7 +1,6 @@
 import React from 'react'
 import ViewMoments from "../../../assets/images/Views/image_6.png"
 import LayoutMain from '../../../layouts/Client/Main'
-import { courses } from './data'
 import slider_home_page_1 from "../../../assets/images/Slider/bg-slider-home-page.png"
 import slider_home_page_2 from "../../../assets/images/Slider/bg-slider-home-page-1.png"
 import SliderCarousel from '../../../components/Carousel/SliderCarousel'
@@ -10,7 +9,9 @@ import CoursesItemCard from './CoursesItemCard'
 import { questions } from '../../../components/F_A_Q/data'
 import FAQuestion from '../../../components/F_A_Q'
 import { IPropsFAQuestion } from '../../../components/F_A_Q/FAQ.interface'
-import { ICoursesCardReview } from '../../../app/Courses/courses.interface'
+import { ICoursesCardReview } from '../../../app/interface/courses.interface'
+import Divider from '../../../components/Divider'
+import { courses } from '../../../data/courses'
 const Courses = (): JSX.Element => {
     const [filterIndex, setFilterIndex] = React.useState<number>(0)
     const [current, setCurrent] = React.useState<number>(3);
@@ -26,8 +27,8 @@ const Courses = (): JSX.Element => {
         <LayoutMain>
             <>
                 <div className='mt-32 relative'>
-                    <div className='absolute w-full h-80 bg-slate-950/20 flex items-center justify-center px-3 z-10 text-white uppercase text-4xl font-medium text-center'>
-                        KHÓA HỌC
+                    <div className='absolute w-full h-80 bg-slate-950/20 flex items-center justify-center px-3 z-10 text-white uppercase text-xl font-normal text-center'>
+                        chuyên nghiệp, nhiệt tình, thành công, hài lòng
                     </div>
                     <SliderCarousel autoplay={true} autoplaySpeed={2500} dots={false}>
                         {
@@ -42,12 +43,13 @@ const Courses = (): JSX.Element => {
                     </SliderCarousel>
                 </div>
                 <div className='container'>
-                    <div>
-                        <p className='px-3 py-2 text-center text-gray-600 text-xl'>
-                            Cung cấp các khóa học hiện hành tại cơ sở chúng tôi
+                    <div className='flex flex-col gap-6 items-center justify-center pt-3'>
+                        <h3 className='text-black text-3xl font-normal '>COURSES</h3>
+                        <p className='text-center'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maxime sint aspernatur,
                         </p>
                     </div>
-                    <div className='flex flex-col gap-8 mt-9'>
+                    <div className='flex flex-col gap-5 mt-9'>
                         {
                             courses.map((r: ICoursesCardReview, index: number) => (
                                 <CoursesItemCard
@@ -60,7 +62,8 @@ const Courses = (): JSX.Element => {
                             ))
                         }
                     </div>
-                    <hr className="border my-4" />
+                    
+                    <Divider/>
                     <div>
                         <h2 className='text-xl font-medium px-3 py-4'>
                             <i className="ri-arrow-right-s-fill"></i>
@@ -83,7 +86,7 @@ const Courses = (): JSX.Element => {
                             </ul>
                         </div>
                     </div>
-                    <hr className="border my-4" />
+                    <Divider/>
                     <div >
                         <h2 className='text-xl font-medium px-3 py-4'>
                             <i className="ri-questionnaire-line mr-2"></i>

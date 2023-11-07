@@ -9,7 +9,7 @@ interface PropsCoursesItemCard{
 const CoursesItemCard = ({...props}:PropsCoursesItemCard):JSX.Element=>{
     return(
         <div
-            className='rounded-md overflow-hidden h-56 w-full relative bg-cover  '
+            className='rounded-sm overflow-hidden h-56 w-full relative bg-cover  '
             style={{
                 backgroundImage:`url(${props.imgUrl})`
             }}

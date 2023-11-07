@@ -1,6 +1,7 @@
 import React from 'react'
 import LayoutMain from '../../../layouts/Client/Main'
 import userTest from "../../../assets/images/User/Usertest.png"
+import CustomInput from '../../../components/Input/CustomInput'
 
 const Profile = (): JSX.Element => {
     React.useEffect(() => {
@@ -23,22 +24,28 @@ const Profile = (): JSX.Element => {
                     </div>
                 </div>
                 <div className='my-3 flex flex-col gap-4'>
-                    <div>
-                        <h3 className='font-medium'>Họ và tên</h3>
-                        <input type="text" className='border border-black rounded-lg py-1 px-3 w-full' placeholder='Họ và tên ' value={'Huỳnh Đăng Khoa'} />
-                    </div>
-                    <div>
-                        <h3 className='font-medium'>Gmail</h3>
-                        <input type="text" className='border border-black rounded-lg py-1 px-3 w-full' placeholder='Họ và tên ' value={'blkhoa17@gmail.com'} readOnly />
-                    </div>
-                    <div>
-                        <h3 className='font-medium'>Số điện thoại</h3>
-                        <input type="text" className='border border-black rounded-lg py-1 px-3 w-full' placeholder='Số điện thoại' value={'0123456789'} />
-                    </div>
-                    <div>
-                        <h3 className='font-medium'>Địa chỉ </h3>
-                        <input type="text" className='border border-black rounded-lg py-1 px-3 w-full' placeholder='Số điện thoại' value={'Hồ Chí Minh'} />
-                    </div>
+                    <CustomInput
+                        labelName='Họ và tên'
+                        icon={<i className="ri-user-line"></i>}
+                        defaultValue='Huỳnh Đăng Khoa'
+                    />
+                    <CustomInput
+                        type='email'
+                        labelName='Email'
+                        icon={<i className="ri-mail-line"></i>}
+                        defaultValue='blkhoa17@gmail.com'
+                        readOnly={true}
+                    />
+                    <CustomInput
+                        labelName='Số điện thoại'
+                        icon={<i className="ri-phone-line"></i>}
+                        defaultValue='0123456789'
+                    />
+                    <CustomInput
+                        labelName='Địa chỉ'
+                        icon={<i className="ri-map-pin-line"></i>}
+                        defaultValue='123 Nguyễn Văn A'
+                    />
                 </div>
                 <div className='flex items-center justify-center'>
                     <button className='rounded-xl bg-black font-medium text-white text-xl px-8  py-1'>

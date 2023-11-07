@@ -1,4 +1,4 @@
-import { INews } from "../app/News/news.interface"
+import { INews } from "../app/interface/news.interface"
 import news1 from "../assets/images/News/news1.jpg"
 import news2 from "../assets/images/News/news2.jpg"
 

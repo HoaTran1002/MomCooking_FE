@@ -5,14 +5,14 @@ import slider_home_page_1 from "../../../assets/images/Slider/bg-slider-home-pag
 import slider_home_page_2 from "../../../assets/images/Slider/bg-slider-home-page-1.png"
 import ViewAround from "../../../assets/images/Views/a1.jpg"
 import { Link } from 'react-router-dom'
-import { INews } from '../../../app/News/news.interface';
+import { INews } from '../../../app/interface/news.interface';
 import SimpleSlider from '../../../components/Carousel/SliderCarousel';
 import NewsCard from '../../../components/Cards/NewsCard';
-import { ICoursesCardReview } from '../../../app/Courses/courses.interface'
-import { IMoments } from '../../../app/Moments/moments.interface'
-import courses from '../Courses/data'
-import { moments } from '../../../data/courses'
+import { ICoursesCardReview } from '../../../app/interface/courses.interface'
+import { IMoments } from '../../../app/interface/moments.interface'
 import { news } from '../../../data/news'
+import { courses } from '../../../data/courses'
+import { moments } from '../../../data/moments'
 const Home = (): JSX.Element => {
 
     React.useEffect(() => {

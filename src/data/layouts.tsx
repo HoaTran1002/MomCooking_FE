@@ -7,11 +7,12 @@ export const AllSettingHeader: IPropsheader[] = [
     { name: "Lessons", path: "/Lessons", icon: <i className="ri-list-indefinite"></i> },
     { name: "News", path: "/News", icon: <i className="ri-newspaper-line"></i> },
     { name: "Contact Us", path: "/Contact", icon: <i className="ri-message-3-line"></i> },
+    { name: "FAQ", path: "/FAQ", icon: <i className="ri-questionnaire-line"></i> },
 ]
 
 export const settingsWhenLoginSuccess:IPropsheader[] = [
-    {name:"My Class",path:'/',icon:<i className="ri-calendar-todo-fill"></i>},
-    {name:"My Debt",path:'/',icon:<i className="ri-wallet-3-fill"></i>}
+    {name:"My Class",path:'/Schedule',icon:<i className="ri-calendar-todo-fill"></i>},
+    {name:"My Debt",path:'/Debit',icon:<i className="ri-wallet-3-fill"></i>}
 ]
 
 export const FooterItems:IPropsFooterItem[]=[

@@ -5,7 +5,7 @@ import news1 from "../../../assets/images/News/news1.jpg"
 import { Link } from 'react-router-dom'
 import slider_home_page_1 from "../../../assets/images/Slider/bg-slider-home-page.png"
 import slider_home_page_2 from "../../../assets/images/Slider/bg-slider-home-page-1.png"
-import { INews } from '../../../app/News/news.interface'
+import { INews } from '../../../app/interface/news.interface'
 import AnotherNews from './NewItem'
 import Slider from 'react-slick'
 import SliderCarousel from '../../../components/Carousel/SliderCarousel'
@@ -25,7 +25,7 @@ const News = (): JSX.Element => {
                     <div className='absolute w-full h-72 bg-slate-950/20 flex items-center justify-center z-10 text-white uppercase text-2xl font-medium text-center'>
                         NEWS
                     </div>
-                    <SliderCarousel>
+                    <SliderCarousel dots={false} autoplay={true} autoplaySpeed={2000}>
                         {
                             news.map((r: INews, index: number) => (
                                 <div key={index} >

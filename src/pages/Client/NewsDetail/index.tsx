@@ -3,11 +3,14 @@ import LayoutMain from '../../../layouts/Client/Main'
 import { newDetail } from './data'
 import "./style.css"
 import AnotherNews from '../News/NewItem'
-const NewsDetail = ():JSX.Element=>{
+import { news } from '../../../data/news'
+import { INews } from '../../../app/interface/news.interface'
+import NewItem from '../News/NewItem'
+const NewsDetail = (): JSX.Element => {
     React.useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    return(
+    return (
         <LayoutMain>
             <>
                 <div className="container">
@@ -27,10 +30,27 @@ const NewsDetail = ():JSX.Element=>{
                         {/* <Divider/> */}
                     </div>
                     <div className="news-detail-content">
-                        <div className="content" dangerouslySetInnerHTML={{ __html: newDetail.content || '' }}/>
+                        <div className="content" dangerouslySetInnerHTML={{ __html: newDetail.content || '' }} />
                     </div>
                 </div>
-                <AnotherNews/>
+                <div className="container">
+                    <h2 className='font-medium text-2xl py-2'>
+                        Another news
+                    </h2>
+                    <div className='list-news grid sm:grid-cols-1 gap-3 mb-4' >
+                        {
+                            news.map((r: INews, index: number) => (
+                                <NewItem
+                                    key={index}
+                                    imgUrl={r.imgUrl}
+                                    timePost={r.timePost}
+                                    titleName={r.titleName}
+                                />
+
+                            ))
+                        }
+                    </div>
+                </div>
             </>
         </LayoutMain>
     )

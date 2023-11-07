@@ -1,16 +1,5 @@
-import { ICoursesCardReview } from "../../../app/Courses/courses.interface"
-import ImgCoursesBread from "../../../assets/images/Courses/bread.png"
-import ImgCoursesKid from "../../../assets/images/Courses/kid.png"
-import ImgCoursesAsia from "../../../assets/images/Courses/asia.png"
-import { IProductsCourse } from "../../../app/Courses/courses.interface"
-export const courses: ICoursesCardReview[] = [
-    { title: "Viet Nam traditional course", subTitle: "We will teach you how to make pure, traditional Vietnamese dishes ", path: "/Courses/1", imgUrl: ImgCoursesAsia },
-    { title: "Kid cooking course", subTitle: "We will teach you how to make pure, traditional Vietnamese dishes ", path: "/Courses/1", imgUrl: ImgCoursesKid },
-    { title: "Bread cooking course", subTitle: "We will teach you how to make pure, traditional Vietnamese dishes ", path: "/Courses/1", imgUrl: ImgCoursesBread },
-    { title: "Viet Nam traditional course", subTitle: "We will teach you how to make pure, traditional Vietnamese dishes ", path: "/Courses/1", imgUrl: ImgCoursesAsia },
-    { title: "Kid cooking course", subTitle: "We will teach you how to make pure, traditional Vietnamese dishes ", path: "/Courses/1", imgUrl: ImgCoursesKid },
-    { title: "Bread cooking course", subTitle: "We will teach you how to make pure, traditional Vietnamese dishes ", path: "/Courses/1", imgUrl: ImgCoursesBread },
-]
+import { IProductsCourse } from "../app/interface/courses.interface";
+
 export const product: IProductsCourse[] = [
     {
       productName: "Bánh kem",
@@ -49,6 +38,3 @@ export const product: IProductsCourse[] = [
     },
   ];
   
-  export default courses;
-  
-export const optionsFilter = ["All", "New Courses", "Popular Courses", "Children Courses", "Privates Courses"]

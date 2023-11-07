@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { INews } from '../../../app/News/news.interface'
+import { INews } from '../../../app/interface/news.interface'
 const NewItem = ({ ...prop }: INews): JSX.Element => {
     return (
         <div>
